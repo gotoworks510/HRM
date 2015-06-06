@@ -1,0 +1,29 @@
+		<div class="row">
+			<div class="large-12 columns">
+				<h1 id="top-bar">Frogメンバー名簿</h1>
+				<hr>
+			</div>
+		</div>
+		<% @schools.each do |s| %>
+		<div class="row person">
+			<div class="large-5 columns">
+				<h3 class="subheader"><%= s.name %></h3>
+				<p><%= s.detail %></p>
+			</div>
+			<div class="large-7 columns">
+				<table>
+					<thead>
+						<tr>
+							<th>規模</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><%= s.scale %></td>
+						</tr>
+					</tbody>
+				</table>
+				<span><%= link_to "詳しく見る", school_path(s),{ :class => "button" } %></span>
+			</div>
+		</div>
+		<% end %>

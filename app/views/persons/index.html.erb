@@ -1,0 +1,29 @@
+		<div class="row">
+			<div class="large-12 columns">
+				<h1 id="top-bar">Frogメンバー名簿</h1>
+				<hr>
+			</div>
+		</div>
+		<% @persons.each do |p| %>
+		<div class="row person">
+			<div class="large-5 columns">
+				<h3 class="subheader"><%= p.name %></h3>
+				<p><%= p.detail %></p>
+			</div>
+			<div class="large-7 columns">
+				<table>
+					<thead>
+						<tr>
+							<th>到着日</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><%= p.arrivalDate %></td>
+						</tr>
+					</tbody>
+				</table>
+				<span><%= link_to "詳しく見る", person_path(p),{ :class => "button" } %></span>
+			</div>
+		</div>
+		<% end %>

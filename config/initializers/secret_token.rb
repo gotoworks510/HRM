@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-HRM::Application.config.secret_key_base = '4fe538decffedef5138a90cc660eaa7de62a4b662c4c01f1a853551ffc7a54c1d271720e50cc1f313b3a19b0a2b579823c1f61b3eab7464576ec94633e8854ed'
+HRM::Application.config.secret_key_base = 'd8d3865820ace582049c8e60c4045f041d742c2745b3692ba0b59b7f45964c487ded8131fe83156a8b87df135df25abadfaf7845e4fe0536880765afbe8a26c8'

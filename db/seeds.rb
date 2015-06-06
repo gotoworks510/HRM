@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# School.create(:name => 'ITD', :detail => 'IT系の学校いろいろあるよ',:people_id => '1', :scale => '中')
+# Person.create(:name => '後藤佳孝', :detail => 'WEB制作者だよ',:school_id => '1', :arrivalDate => '2015/06/05')
+Person.create(:name => 'Ryo Okamura', :detail => 'ビジネスまん',:school_id => '1', :arrivalDate => '2015/06/02')
