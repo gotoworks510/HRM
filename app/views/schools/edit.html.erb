@@ -1,0 +1,21 @@
+		<div class="row">
+			<div class="large-12 columns">
+				<h1 id="top-bar">学校一覧</h1>
+				<hr>
+			</div>
+		</div>
+		<div class="row school">
+			<div class="large-5 columns">
+				<h3 class="subheader"><%= @school.name %>の情報を編集中</h3>
+				<%= form_for(@school) do |s| %>
+					<div class="field">
+					<%= s.text_field :name %>
+					<%= s.text_area :detail %>
+					<%= s.select :scale, ["大", "中", "小"] %>
+					</div>
+					<div class="actions">
+					<%= s.submit "Edit" %>
+					</div>
+				<% end %>
+			</div>
+		</div>
