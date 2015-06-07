@@ -1,4 +1,6 @@
 HRM::Application.routes.draw do
+  root :to => 'people#welcome'
+
   get '/people' => 'people#index'
   get '/people/new' => 'people#new'
   get '/people/:id' => 'people#show', as: :show_person

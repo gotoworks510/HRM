@@ -1,0 +1,47 @@
+		<div class="row">
+			<div class="large-12 columns">
+				<h1 id="top-bar">Frogメンバー一覧</h1>
+				<hr>
+				<table>
+					<thead>
+						<tr>
+							<th width="20%">名前</th>
+							<th width="60%">コメント</th>
+							<th width="20%">到着日</th>
+						</tr>
+					</thead>
+		<% @people.each do |p| %>
+					<tr>
+						<td><%= link_to p.name, person_path(p) %></td>
+						<td><%= p.detail %></td>
+						<td><%= p.arrivalDate %></td>
+					</tr>
+		<% end %>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<h1 id="top-bar">学校一覧</h1>
+				<hr>
+				<table>
+					<thead>
+						<tr>
+							<th width="20%">学校名</th>
+							<th width="20%">規模</th>
+							<th>コメント</th>
+						</tr>
+					</thead>
+		<% @schools.each do |s| %>
+					<tr>
+						<td><%= link_to s.name, person_path(s) %></td>
+						<td><%= s.scale %></td>
+						<td><%= s.detail %></td>
+					</tr>
+		<% end %>
+				</table>
+			</div>
+		</div>
+
+

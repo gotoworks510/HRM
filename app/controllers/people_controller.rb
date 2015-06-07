@@ -1,4 +1,8 @@
 class PeopleController < ApplicationController
+	def welcome
+		@people = Person.all
+		@schools = School.all
+	end
 	def index
 		@people = Person.all
 	end
