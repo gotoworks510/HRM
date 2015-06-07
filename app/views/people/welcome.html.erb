@@ -1,5 +1,5 @@
 		<div class="row">
-			<div class="large-12 columns">
+			<div class="large-12 columns table">
 				<h1 id="top-bar">Frogメンバー一覧</h1>
 				<hr>
 				<table>
@@ -22,7 +22,7 @@
 		</div>
 
 		<div class="row">
-			<div class="large-12 columns">
+			<div class="large-12 columns table">
 				<h1 id="top-bar">学校一覧</h1>
 				<hr>
 				<table>
@@ -35,7 +35,7 @@
 					</thead>
 		<% @schools.each do |s| %>
 					<tr>
-						<td><%= link_to s.name, person_path(s) %></td>
+						<td><%= link_to s.name, school_path(s) %></td>
 						<td><%= s.scale %></td>
 						<td><%= s.detail %></td>
 					</tr>
