@@ -1,6 +1,6 @@
 		<div class="row">
 			<div class="large-12 columns">
-				<h1 id="top-bar">Frogメンバー名簿</h1>
+				<h1 id="top-bar">学校詳細</h1>
 				<hr>
 			</div>
 		</div>
@@ -44,5 +44,6 @@
 		<% end %>
 				</table>
 				<%= link_to "編集", edit_school_path(@school),{ :class => "button" } %>
+				<%= link_to "一覧へ", {:controller => "schools"}, {:class => "button" } %>
 			</div>
 		</div>

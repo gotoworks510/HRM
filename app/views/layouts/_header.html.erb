@@ -1,7 +1,7 @@
 <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#">My Site</a></h1>
+      <h1><a href="#">Frog Member Page</a></h1>
     </li>
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -11,15 +11,17 @@
     <!-- Right Nav Section -->
     <ul class="right">
       <li class="has-dropdown">
-        <a href="#">学校</a>
+        <a href="/schools">学校</a>
         <ul class="dropdown">
           <li><%= link_to "学校一覧", :controller => "schools" %></li>
+          <li><%= link_to "学校追加", '/schools/new' %></li>
         </ul>
       </li>
       <li class="has-dropdown">
-        <a href="#">メンバー</a>
+        <a href="/people">メンバー</a>
         <ul class="dropdown">
-          <li><%= link_to "メンバー一覧", :controller => "persons" %></li>
+          <li><%= link_to "メンバー一覧", :controller => "people" %></li>
+          <li><%= link_to "メンバー追加", '/people/new' %></li>
         </ul>
       </li>
     </ul>

@@ -1,6 +1,6 @@
 		<div class="row">
 			<div class="large-12 columns">
-				<h1 id="top-bar">Frogメンバー名簿</h1>
+				<h1 id="top-bar">学校一覧</h1>
 				<hr>
 			</div>
 		</div>
@@ -24,6 +24,7 @@
 					</tbody>
 				</table>
 				<span><%= link_to "詳しく見る", school_path(s),{ :class => "button" } %></span>
+				<span><%= link_to '削除', school_path(s), :confirm => 'Are you sure?', :method => :delete, :class => 'button' %>
 			</div>
 		</div>
 		<% end %>

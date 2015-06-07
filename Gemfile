@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
+gem 'pg', '0.18.1', group: :production
+gem 'rails_12factor'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.3'
@@ -33,6 +35,8 @@ group :doc do
 end
 
 gem 'foundation-rails', '~> 5.5.2.1'
+
+gem 'foundation-datetimepicker-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

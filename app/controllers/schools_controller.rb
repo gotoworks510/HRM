@@ -6,6 +6,22 @@ class SchoolsController < ApplicationController
 		@school = School.find(params[:id])
 		@persons = @school.persons
 	end
+	def new
+		@schools = School.new
+	end
+	def create
+		@schools = School.new(school_params)
+		if @schools.save
+			redirect_to '/schools'
+		else
+			render 'new'
+		end
+	end
+	def destroy
+		@school = School.find(params[:id])
+		@school.destroy
+		redirect_to '/schools'
+	end
 	def edit
 		@school = School.find(params[:id])
 	end

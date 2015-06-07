@@ -1,16 +1,20 @@
 HRM::Application.routes.draw do
-  get '/persons' => 'persons#index'
-  get '/persons/:id' => 'persons#show', as: :person
-  get '/persons/:id/edit' => 'persons#edit', as: :edit_person
-  patch '/persons/:id' => 'persons#update'
+  get '/people' => 'people#index'
+  get '/people/new' => 'people#new'
+  get '/people/:id' => 'people#show', as: :show_person
+  get '/people/:id/edit' => 'people#edit', as: :edit_person
+  patch '/people/:id' => 'people#update'
+  post '/people' => 'people#create'
+
   get '/schools' => 'schools#index'
-  get '/schools/:id' => 'schools#show', as: :school
+  get '/schools/new' => 'schools#new'
+  get '/schools/:id' => 'schools#show', as: :show_school
   get '/schools/:id/edit' => 'schools#edit', as: :edit_school
   patch '/schools/:id' => 'schools#update'
+  post '/schools' => 'schools#create'
 #  get '/schools' => 'schools#index'
 #  get '/schools/:id' => 'schools#show' as: :school
-  resources :persons
-  resources :schools
+  resources :people, :schools
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

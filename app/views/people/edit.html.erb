@@ -12,9 +12,10 @@
 					<%= p.text_field :name %>
 					<%= p.text_area :detail %>
 					<%= p.collection_select :school_id, School.all, :id, :name %>
+					<%= p.date_field :arrivalDate %>
 					</div>
 					<div class="actions">
-					<%= p.submit "Edit" %>
+					<%= p.submit "保存", {:class => 'button'} %>
 					</div>
 				<% end %>
 			</div>

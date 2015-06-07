@@ -24,6 +24,8 @@
 						</tr>
 					</tbody>
 				</table>
-				<%= link_to "編集", edit_person_path(@person),{ :class => "button" } %>
+				<%= link_to "編集", edit_person_path(@person), { :class => "button" } %>
+				<span><%= link_to '削除', person_path(@person), :confirm => 'Are you sure?', :method => :delete, :class => 'button' %>
+				<%= link_to "一覧へ", {:controller => "people"}, {:class => "button" } %>
 			</div>
 		</div>
